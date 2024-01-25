@@ -5,7 +5,7 @@ const thank = document.querySelector(".like")
 
 window.addEventListener("scroll", () => {
   profile.style.bottom = window.scrollY + "px";
-  cover.style.backgroundPosition = `center ${-window.scrollY * 0.7}px`;
+  cover.style.backgroundPosition = `center ${-window.scrollY /5}px`;
 });
 
 let isOff = false;
