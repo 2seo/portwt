@@ -1,6 +1,7 @@
 const cover = document.querySelector(".cover");
 const profile = document.querySelector(".profile");
-const toggle = document.querySelector("button");
+const toggle = document.querySelector(".menu-toggle");
+const thank = document.querySelector(".like")
 
 window.addEventListener("scroll", () => {
   profile.style.bottom = window.scrollY + "px";
@@ -15,3 +16,7 @@ toggle.addEventListener("click", () => {
     isOff ? "light" : "dark"
   );
 });
+
+thank.addEventListener('click', () => {
+    alert("Thank You! ( •̀ .̫ •́ )✧");
+})

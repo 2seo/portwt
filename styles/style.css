@@ -1,57 +1,99 @@
-@import 'reset.css';
-@import 'theme.css';
+@import "reset.css";
+@import "theme.css";
 
+* {
+    transition: color .3s ;
+    transition: background .7s ;
+}
 body {
-    background-color: var(--backgroundColor);
-    color: var(--fontColor);
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
 }
 .menu-toggle {
-    z-index: 50;
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--pointColor);
-    border-radius: 30%;
-    cursor: pointer;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  z-index: 50;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--pointColor);
+  border-radius: 30%;
+  cursor: pointer;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
 }
 .menu-toggle svg {
-    width: 70%;
-    fill: var(--fontColor);
+  width: 70%;
+  fill: var(--fontColor);
 }
 .container {
-    max-width: 900px;
-    height: 100%;
-    margin: 0 auto;
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
 }
 .cover {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/STS41B-35-1613_-_Bruce_McCandless_II_during_EVA_%28Retouched%29.jpg/800px-STS41B-35-1613_-_Bruce_McCandless_II_during_EVA_%28Retouched%29.jpg) center center / cover no-repeat;   
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/STS41B-35-1613_-_Bruce_McCandless_II_during_EVA_%28Retouched%29.jpg/800px-STS41B-35-1613_-_Bruce_McCandless_II_during_EVA_%28Retouched%29.jpg)
+    center center / cover no-repeat;
 }
 .cover .profile {
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    max-height: 300px;
-    bottom: 0;
-    background-color: var(--backgroundColor);
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  max-height: 300px;
+  bottom: 0;
+  background-color: var(--backgroundColor);
 }
-.cover .profile .container  img {
-    position: absolute;
+.cover .profile .container img {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  transform: translate(30px, -50%);
+  box-shadow: 0 0 10px var(--pointColor);
+  background-color: var(--backgroundColor);
+}
+.profile-inner {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 80px 50px 60px;
+  .like {
+    margin: 20px 20px 0 auto;
+    height: 40px;
     width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    transform: translate(30px,-50%);
-    box-shadow: 0 0 10px var(--backgroundColor);
+    background: none;
+    color: var(--pointColor);
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 50px;
+    border: 2px solid var(--pointColor);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--pointColor);
+      color: white;
+      transition: all 0.3s ease-in;
+    }
+  }
+  span {
+    padding: 0 15px;
+  }
+  .name {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .introduce {
+    font-size: 0.8em;
+  }
+  .career {
+    opacity: 0.7;
+  }
 }
 .main {
-    position: absolute;
-    width: 100%;
-    height: 500vh;
-    top: 100vh;
-    background-color: var(--backgroundColor);
+  position: absolute;
+  width: 100%;
+  height: 500vh;
+  top: 100vh;
+  background-color: var(--backgroundColor);
 }
