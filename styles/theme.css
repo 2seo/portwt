@@ -1,0 +1,13 @@
+:root {
+    --backgroundColor: #223;
+    --fontColor: #eee;
+    --pointColor: rgb(71, 172, 255);
+}
+:root[color-theme='light'] {
+    --backgroundColor: #fff;
+    --fontColor: #222;
+}
+:root[color-theme='dark'] {
+    --backgroundColor: #223;
+    --fontColor: #eee;
+}
