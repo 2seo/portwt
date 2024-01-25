@@ -5,7 +5,7 @@
 }
 :root[color-theme='light'] {
     --backgroundColor: #fff;
-    --fontColor: #112;
+    --fontColor: #334;
 }
 :root[color-theme='dark'] {
     --backgroundColor: #112;
