@@ -91,7 +91,7 @@ body {
     font-size: 0.9em;
   }
   .career {
-    width: 500px;
+    max-width: 500px;
     display: grid;
     grid-template-columns: 50% 50%;
     font-size: 0.8em;
