@@ -1,11 +1,11 @@
 const cover = document.querySelector(".cover");
 const profile = document.querySelector(".profile");
-const nav = document.querySelector("nav");
+const nav = document.querySelector(".nav");
 
 window.addEventListener("scroll", () => {
   profile.style.bottom = window.scrollY + "px";
   cover.style.backgroundPosition = `center ${-window.scrollY /5}px`;
-  nav.style.display = window.scrollY>innerHeight ? "block" : "none";
+  nav.style.position = window.scrollY>innerHeight ? "fixed" : "unset";
 });
 
 const toggle = document.querySelector(".menu-toggle");
