@@ -1,5 +1,5 @@
 :root {
-    --backgroundColor: #112;
+    --backgroundColor: #1a1c2c;
     --fontColor: #eee;
     --pointColor: rgb(71, 172, 255);
 }
@@ -8,6 +8,6 @@
     --fontColor: #334;
 }
 :root[color-theme='dark'] {
-    --backgroundColor: #112;
+    --backgroundColor: #1a1c2c;
     --fontColor: #eee;
 }
