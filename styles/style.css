@@ -102,11 +102,10 @@ body {
       align-items: center;
       gap: 5px;
       overflow: hidden;
-    }
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--fontColor);
+      a:hover {
+        color: var(--pointColor);
+        transition: all 0.3s;
+      }
     }
   }
 }
@@ -143,7 +142,7 @@ body {
     &:hover {
       background-color: var(--pointColor);
       color: var(--fontColor);
-      transition: all .2s;
+      transition: all 0.2s;
     }
   }
   .selected {
@@ -155,7 +154,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  img{
+  img {
     width: 50%;
     margin: 20px;
   }
@@ -165,12 +164,12 @@ body {
 }
 .main .about .skill {
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   padding: 20px;
   margin: 30px 0;
   border-radius: 20px;
   background-color: rgba(170, 170, 200, 0.3);
-  
+
   .title {
     display: block;
     width: 100%;
@@ -185,13 +184,17 @@ body {
     gap: 10px;
     margin-bottom: 5px;
   }
+  span{
+    width: 100px;
+    overflow: hidden;
+  }
   .skill-bar {
-    width: 75%;
+    width: 100%;
     height: 30px;
     border-radius: 30px;
     background-color: var(--backgroundColor);
     overflow: hidden;
-    
+
     span {
       height: 100%;
       width: 0%;

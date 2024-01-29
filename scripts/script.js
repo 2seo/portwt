@@ -4,7 +4,6 @@ const nav = document.querySelector(".nav");
 const main = document.querySelector(".main");
 const section = main.querySelectorAll(".container section");
 
-console.log(section);
 window.addEventListener("scroll", () => {
   profile.style.bottom = window.scrollY + "px";
   cover.style.backgroundPosition = `center ${-window.scrollY / 5}px`;
