@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
   main.style.paddingTop = window.scrollY > innerHeight ? "50px" : 0;
   if (scrollY === 0) {
     movePercents(false);
-  } else {
+  } else if (scrollY >innerHeight*0.5) {
     movePercents(true);
   }
   if (scrollY<innerHeight+section[0].scrollHeight) {
