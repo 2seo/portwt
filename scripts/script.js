@@ -8,13 +8,10 @@ window.addEventListener("scroll", () => {
   cover.style.backgroundPosition = `center ${-window.scrollY / 5}px`;
   nav.style.position = window.scrollY > innerHeight ? "fixed" : "unset";
   main.style.paddingTop = window.scrollY > innerHeight ? "50px" : 0;
-  if(scrollY===0) {
-    percents.forEach((p)=>{
-      p.style.width= 0;
-    });
-  }
-  else{
-    movePercents();
+  if (scrollY === 0) {
+    movePercents(false);
+  } else {
+    movePercents(true);
   }
 });
 
@@ -37,7 +34,7 @@ const menus = document.querySelectorAll(".nav-inner span");
 menus.forEach((_, idx) => {
   menus[idx].addEventListener("click", () => {
     window.scroll({
-      top: innerHeight*(idx+1),
+      top: innerHeight * (idx + 1),
       left: 0,
       behavior: "smooth",
     });
@@ -48,21 +45,25 @@ menus.forEach((_, idx) => {
         menus[i].classList.remove("selected");
       }
     }
-    if(idx===0) {
-      movePercents();
+    if (idx === 0) {
+      movePercents(true);
     } else {
-      percents.forEach((p)=>{
-        p.style.width= 0;
-      });
+      movePercents(false);
     }
   });
 });
 
 const percents = document.querySelectorAll(".skill-bar span");
-
-const movePercents = () => {
-  percents.forEach((p)=>{
-    p.style.width= p.innerHTML;
-    p.style.backgroundColor= p.classList;
-  });
-}
+const movePercents = (isMove) => {
+  if (isMove) {
+    percents.forEach((p) => {
+      p.style.width = p.innerHTML;
+      p.style.backgroundColor = p.classList;
+    });
+  } else {
+    percents.forEach((p) => {
+      p.style.width = 0;
+      p.style.backgroundColor = "inherit";
+    });
+  }
+};
