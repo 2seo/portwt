@@ -151,9 +151,6 @@ body {
     color: var(--fontColor);
   }
 }
-.main section {
-  /* border: 1px solid yellow; */
-}
 .main .about {
   display: flex;
   align-items: center;
@@ -204,4 +201,13 @@ body {
       transition: width 2s;
     }
   }
+}
+.main .projects {
+  height: 100vh;
+}
+.main .contact {
+  height: 100vh;
+}
+.footer {
+  height: 50px;
 }

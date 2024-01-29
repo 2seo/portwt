@@ -2,7 +2,9 @@ const cover = document.querySelector(".cover");
 const profile = document.querySelector(".profile");
 const nav = document.querySelector(".nav");
 const main = document.querySelector(".main");
+const section = main.querySelectorAll(".container section");
 
+console.log(section);
 window.addEventListener("scroll", () => {
   profile.style.bottom = window.scrollY + "px";
   cover.style.backgroundPosition = `center ${-window.scrollY / 5}px`;
@@ -12,6 +14,13 @@ window.addEventListener("scroll", () => {
     movePercents(false);
   } else {
     movePercents(true);
+  }
+  if (scrollY<innerHeight+section[0].scrollHeight) {
+    selectMenu(0);
+  } else if(scrollY<innerHeight+section[0].scrollHeight+section[1].scrollHeight){
+    selectMenu(1);
+  } else {
+    selectMenu(2);
   }
 });
 
@@ -38,13 +47,7 @@ menus.forEach((_, idx) => {
       left: 0,
       behavior: "smooth",
     });
-    for (i = 0; i < menus.length; i++) {
-      if (i === idx) {
-        menus[i].classList.add("selected");
-      } else {
-        menus[i].classList.remove("selected");
-      }
-    }
+    selectMenu(idx);
     if (idx === 0) {
       movePercents(true);
     } else {
@@ -52,6 +55,16 @@ menus.forEach((_, idx) => {
     }
   });
 });
+
+const selectMenu = (idx) => {
+  for (i = 0; i < menus.length; i++) {
+    if (i === idx) {
+      menus[i].classList.add("selected");
+    } else {
+      menus[i].classList.remove("selected");
+    }
+  }
+}
 
 const percents = document.querySelectorAll(".skill-bar span");
 const movePercents = (isMove) => {
