@@ -152,8 +152,7 @@ body {
   }
 }
 .main section {
-  height: 100vh;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .main .about {
   display: flex;
@@ -163,13 +162,23 @@ body {
     width: 50%;
     margin: 20px;
   }
+  span {
+    text-align: center;
+  }
 }
 .main .about .skill {
   width: 100%;
   padding: 30px;
   border-radius: 20px;
   background-color: rgba(170, 170, 200, 0.3);
-
+  
+  .title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
   div {
     display: flex;
     align-items: center;
@@ -187,6 +196,7 @@ body {
     span {
       height: 100%;
       width: 0%;
+      margin: 0;
       color: var(--backgroundColor);
       text-align: right;
       padding-right: 10px;
