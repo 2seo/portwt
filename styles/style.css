@@ -155,3 +155,43 @@ body {
   height: 100vh;
   border: 1px solid yellow;
 }
+.main .about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  img{
+    width: 50%;
+    margin: 20px;
+  }
+}
+.main .about .skill {
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgba(170, 170, 200, 0.3);
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  .skill-bar {
+    width: 75%;
+    height: 30px;
+    border-radius: 30px;
+    background-color: var(--backgroundColor);
+    overflow: hidden;
+    
+    span {
+      height: 100%;
+      width: 0%;
+      color: var(--backgroundColor);
+      text-align: right;
+      padding-right: 10px;
+      line-height: 30px;
+      transition: width 2s;
+    }
+  }
+}
