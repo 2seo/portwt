@@ -24,7 +24,7 @@ window.addEventListener("scroll", () => {
 });
 
 const toggle = document.querySelector(".menu-toggle");
-let isOff = false;
+let isOff = true;
 toggle.addEventListener("click", () => {
   isOff = !isOff;
   document.documentElement.setAttribute(

@@ -1,6 +1,6 @@
 :root {
-    --backgroundColor: #1a1c2c;
-    --fontColor: #eee;
+    --backgroundColor: #fff;
+    --fontColor: #334;
     --pointColor: rgb(71, 172, 255);
 }
 :root[color-theme='light'] {
