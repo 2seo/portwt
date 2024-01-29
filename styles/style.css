@@ -55,14 +55,13 @@ body {
   border-radius: 50%;
   transform: translateY(-50%);
   /* box-shadow: 0 0 10px var(--pointColor); */
-  background-color: var(--backgroundColor);
   border: 3px solid var(--backgroundColor);
 }
 .profile-inner {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 70px 40px 80px 90px;
+  grid-template-rows: 70px 40px 70px 90px;
   .like {
     margin: auto 0 auto auto;
     height: 40px;
@@ -101,7 +100,7 @@ body {
       display: flex;
       height: 100%;
       align-items: center;
-      gap: 2px;
+      gap: 5px;
       overflow: hidden;
     }
     svg {
@@ -114,7 +113,6 @@ body {
 .main {
   position: absolute;
   width: 100%;
-  height: 500vh;
   top: 100vh;
   background-color: var(--backgroundColor);
 }
@@ -152,4 +150,8 @@ body {
     background-color: var(--pointColor);
     color: var(--fontColor);
   }
+}
+.main section {
+  height: 100vh;
+  border: 1px solid yellow;
 }
