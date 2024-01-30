@@ -11,12 +11,15 @@ window.addEventListener("scroll", () => {
   main.style.paddingTop = window.scrollY > innerHeight ? "50px" : 0;
   if (scrollY === 0) {
     movePercents(false);
-  } else if (scrollY >innerHeight*0.5) {
+  } else if (scrollY > innerHeight * 0.5) {
     movePercents(true);
   }
-  if (scrollY<innerHeight+section[0].scrollHeight) {
+  if (scrollY < innerHeight + section[0].scrollHeight) {
     selectMenu(0);
-  } else if(scrollY<innerHeight+section[0].scrollHeight+section[1].scrollHeight){
+  } else if (
+    scrollY <
+    innerHeight + section[0].scrollHeight + section[1].scrollHeight
+  ) {
     selectMenu(1);
   } else {
     selectMenu(2);
@@ -41,15 +44,29 @@ thank.addEventListener("click", () => {
 const menus = document.querySelectorAll(".nav-inner span");
 menus.forEach((_, idx) => {
   menus[idx].addEventListener("click", () => {
-    // let scrollH = 0;
-    // section.map((sec, i) => {
-    //   if(i<idx) scrollH+=section[i].scrollHeight;
-    // })
-    // window.scroll({
-    //   top: scrollH || innerHeight,
-    //   left: 0,
-    //   behavior: "smooth",
-    // });
+    switch (idx) {
+      case 0:
+        window.scroll({
+          top: innerHeight,
+          left: 0,
+          behavior: "smooth",
+        });
+        break;
+      case 1:
+        window.scroll({
+          top: innerHeight+section[0].scrollHeight,
+          left: 0,
+          behavior: "smooth",
+        });
+        break;
+      case 2:
+        window.scroll({
+          top: innerHeight+section[0].scrollHeight+section[1].scrollHeight,
+          left: 0,
+          behavior: "smooth",
+        });
+        break;
+    }
     selectMenu(idx);
     if (idx === 0) {
       movePercents(true);
@@ -67,7 +84,7 @@ const selectMenu = (idx) => {
       menus[i].classList.remove("selected");
     }
   }
-}
+};
 
 const percents = document.querySelectorAll(".skill-bar span");
 const movePercents = (isMove) => {

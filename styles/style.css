@@ -220,7 +220,10 @@ body {
     padding: 5px 0;
   }
   .period {
+    font-size: 0.9em;
     opacity: 0.5;
+    margin-bottom: 5px;
+    padding: 0 2px;
   }
   .desc {
 
