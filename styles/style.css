@@ -141,13 +141,13 @@ body {
     padding-top: 2px;
     &:hover {
       background-color: var(--pointColor);
-      color: var(--fontColor);
+      color: #fff;
       transition: all 0.2s;
     }
   }
   .selected {
     background-color: var(--pointColor);
-    color: var(--fontColor);
+    color: #fff;
   }
 }
 .main .about {
@@ -166,9 +166,9 @@ body {
   width: 100%;
   max-width: 600px;
   padding: 20px;
-  margin: 30px 0;
+  margin: 50px 0;
   border-radius: 20px;
-  background-color: rgba(170, 170, 200, 0.3);
+  background-color: rgba(170, 170, 200, 0.2);
 
   .title {
     display: block;
@@ -208,11 +208,34 @@ body {
   }
 }
 .main .projects {
+  border: 1px solid magenta;
   height: 100vh;
 }
+.main .projects .project {
+  border-bottom: 1px solid rgba(170, 170, 200, 0.2);
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 1.5em;
+    padding: 5px 0;
+  }
+  .period {
+    opacity: 0.5;
+  }
+  .desc {
+
+  }
+  .image-wrap {
+    height: 100px;
+    background-color: antiquewhite;
+    margin: 10px 0;
+  }
+}
 .main .contact {
+  border: 1px solid yellowgreen;
   height: 100vh;
 }
 .footer {
-  height: 50px;
+  border: 1px solid aqua;
+  height: 500px;
 }

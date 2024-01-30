@@ -41,11 +41,15 @@ thank.addEventListener("click", () => {
 const menus = document.querySelectorAll(".nav-inner span");
 menus.forEach((_, idx) => {
   menus[idx].addEventListener("click", () => {
-    window.scroll({
-      top: innerHeight * (idx + 1),
-      left: 0,
-      behavior: "smooth",
-    });
+    // let scrollH = 0;
+    // section.map((sec, i) => {
+    //   if(i<idx) scrollH+=section[i].scrollHeight;
+    // })
+    // window.scroll({
+    //   top: scrollH || innerHeight,
+    //   left: 0,
+    //   behavior: "smooth",
+    // });
     selectMenu(idx);
     if (idx === 0) {
       movePercents(true);
